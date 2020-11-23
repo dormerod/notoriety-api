@@ -1,0 +1,18 @@
+Resources:
+  notes:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: notes
+      AttributeDefinitions:
+        - AttributeName: userId
+          AttributeType: N
+        - AttributeName: noteId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: userId
+          KeyType: HASH
+        - AttributeName: noteId
+          KeyType: RANGE
+      SSESpecification:
+        SSEEnabled: false # server-side encryption is not enabled
+      BillingMode: PAY_PER_REQUEST

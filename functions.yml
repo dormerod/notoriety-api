@@ -1,0 +1,6 @@
+create:
+  handler: src/create.default
+  events:
+    - http:
+        path: notes
+        method: post
