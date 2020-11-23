@@ -1,6 +1,5 @@
 # Distribution / packaging
 dist/
-lib/
 node_modules/
 types/
 .webpack
